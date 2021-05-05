@@ -1,5 +1,5 @@
 # Discord-Bot-Base
- A base for creating a discord bot.
+This is a useful base to build your bot it includes a Command & Event handler. It will detect any new commands or events added into the register folders, the registered folders are defined inside the handler files.
  
 # Read the following before reporting bugs!
 ### Program to use
