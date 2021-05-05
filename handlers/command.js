@@ -1,4 +1,3 @@
-const Nsfw = require("discord-nsfw/src/Nsfw");
 const { readdirSync } = require(`fs`);
 
 module.exports = (bot) => {
