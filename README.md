@@ -6,9 +6,9 @@
 This bot has only been tested on VS Code, expect it to not work in any other enviroment.
 
 ### Project dependencies
-You have to install the following dependencies `Discord.js` and `fs`. 
+The following dependencies must be installed `Discord.js` and `fs`. 
 
-You can install the dependencies by running `npm i <dependency>`.
+Dependencies can be installed by running `npm i <dependency>`.
 
 ### Implementing commands or events
 Commands are easily add, firstly add a sub dir to the commands folder and register it inside the handler file.
