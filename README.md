@@ -11,9 +11,11 @@ The following dependencies must be installed `Discord.js` and `fs`.
 Dependencies can be installed by running `npm i <dependency>`.
 
 ### Implementing commands or events
-Commands are easily add, firstly add a sub dir to the commands folder and register it inside the handler file.
+Commands are easily implemented by creating files inside commands sub directory.
 
-Same goes for events you must register the sub dir and create your event or add an event to existing sub dir.
+Events are easily implemented by creating files inside evnts sub directory.
+
+Creating new folders for events or commands are easily registered in the respected handler file.
 
 ### Final touches
 Add your discord bot token, bot tokens can be aquired on the devloper portal page of discord.
