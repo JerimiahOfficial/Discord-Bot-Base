@@ -3,7 +3,7 @@
  
 # Read the following before reporting bugs!
 ### Program to use
-This bot has only been tested on VS Code, expect it to not work in any other enviroment.
+This bot has only been tested on VS Code, expect it to not work in any other enviroment and requres you to have node.js installed on your system.
 
 ### Project dependencies
 The following dependencies must be installed `Discord.js` and `fs`. 
