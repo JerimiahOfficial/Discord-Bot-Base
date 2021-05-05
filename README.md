@@ -16,4 +16,4 @@ After installing the dependencies add your discord bot token, bot tokens can be 
 
 Commands are easily add, firstly add a sub dir to the commands folder and register it inside the handler file.
 
-Then you can run your bot with `node .`
+Then you can run your bot with `node .` inside the VS Code terminal.
