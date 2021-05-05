@@ -1,7 +1,7 @@
 # Discord-Bot-Base
  A base for creating a discord bot.
  
-# Read the following steps before reporting bugs!
+# Read the following before reporting bugs!
 ### Program to use
 This bot has only been tested on VS Code, expect it to not work in any other enviroment.
 
