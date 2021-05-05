@@ -19,6 +19,6 @@ Same goes for events you must register the sub dir and create your event or add 
 After installing the dependencies add your discord bot token, bot tokens can be aquired on the devloper portal page of discord.
 [Developer Portal Link](https://discord.com/developers/applications)
 
-Then you can run your bot with `node .` inside the VS Code terminal.
+The bot can be ran by using `node .` inside the VS Code terminal.
 
 This bot is ran locally but can easily be uploaded to a hosting service.
