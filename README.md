@@ -20,3 +20,5 @@ After installing the dependencies add your discord bot token, bot tokens can be 
 [Developer Portal Link](https://discord.com/developers/applications)
 
 Then you can run your bot with `node .` inside the VS Code terminal.
+
+This bot is ran locally but can easily be uploaded to a hosting service.
