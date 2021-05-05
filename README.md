@@ -16,7 +16,7 @@ Commands are easily add, firstly add a sub dir to the commands folder and regist
 Same goes for events you must register the sub dir and create your event or add an event to existing sub dir.
 
 ### Final touches
-After installing the dependencies add your discord bot token, bot tokens can be aquired on the devloper portal page of discord.
+Add your discord bot token, bot tokens can be aquired on the devloper portal page of discord.
 [Developer Portal Link](https://discord.com/developers/applications)
 
 The bot can be ran by using `node .` inside the VS Code terminal.
