@@ -10,10 +10,13 @@ You have to install the following dependencies `Discord.js` and `fs`.
 
 You can install the dependencies by running `npm i <dependency>`.
 
+### Implementing commands or events
+Commands are easily add, firstly add a sub dir to the commands folder and register it inside the handler file.
+
+Same goes for events you must register the sub dir and create your event or add file to existing sub dir.
+
 ### Final touches
 After installing the dependencies add your discord bot token, bot tokens can be aquired on the devloper portal page of discord.
 [Developer Portal Link](https://discord.com/developers/applications)
-
-Commands are easily add, firstly add a sub dir to the commands folder and register it inside the handler file.
 
 Then you can run your bot with `node .` inside the VS Code terminal.
