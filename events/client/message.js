@@ -1,6 +1,6 @@
 const { Discord } = require("discord.js");
 const { fs } = require('fs');
-const { prefix } = require('../../config.json');
+const { prefix } = require('../../botconfig.json');
 
 module.exports = async (bot, message) => {
     if(message.author.bot || message.channel.type === "dm" || !message.content.startsWith(prefix)) 
