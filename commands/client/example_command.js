@@ -13,6 +13,6 @@ module.exports = {
         Message.reply("Pong!");
 
         // Log author of command sender and targets.
-        console.log(`${message.author.username} shipped ${args[0]} and ${args[1]} together.`)
+        console.log(`${message.author.username} used command "ping".`)
     }
 }
