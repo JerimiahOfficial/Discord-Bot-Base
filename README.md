@@ -11,7 +11,7 @@ The following dependencies must be installed `Discord.js` and `fs`.
 Dependencies can be installed by running `npm i <dependency>`.
 
 ### Implementing commands or events
-There are examples for events and commands inside the project file, for events I recommend using the following event cheat sheets [Cheat Sheet #1](https://github.com/armfxl/discord.js-cheatsheet/blob/main/cheatsheet.js) or [Cheat Sheat #2](https://gist.github.com/koad/316b265a91d933fd1b62dddfcc3ff584).
+There are examples for an event also for a command inside the project file, for events I recommend using the following event cheat sheets [Cheat Sheet #1](https://github.com/armfxl/discord.js-cheatsheet/blob/main/cheatsheet.js) or [Cheat Sheat #2](https://gist.github.com/koad/316b265a91d933fd1b62dddfcc3ff584).
 
 ### Final touches
 Add your discord bot token, bot tokens can be aquired on the devloper portal page of discord.
