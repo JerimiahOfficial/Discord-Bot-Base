@@ -1,5 +1,5 @@
 # Discord-Bot-Base
-This is a useful base to build your bot it includes a Command & Event handler. It will detect any new commands or events added into the register folders, the registered folders are defined inside the handler files.
+This is a useful base to build your bot it includes a Command & Event handler. It will detect any new commands or events added into the source folder, and then load them on startup of your bot.
  
 # Read the following before reporting bugs!
 ### Program to use
