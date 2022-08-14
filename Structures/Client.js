@@ -2,7 +2,6 @@ const Command = require("./Command.js");
 const Discord = require("discord.js");
 const Event = require("./Event.js");
 const fs = require("fs");
-const Logger = require("../helpers/logger.js");
 
 class Client extends Discord.Client {
     constructor() {
