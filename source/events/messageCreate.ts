@@ -12,7 +12,7 @@ export default new Event(
     if (!message.content.startsWith('!')) return
 
     const { content } = message
-    const command = client.commands.find((cmd) => cmd.name === content.split(' ')[0].substr(1).toLowerCase())
+    const command = client.commands.find((cmd) => cmd.name === content.split(' ')[0].slice(1).toLowerCase())
     const args = content.split(' ').splice(1)
 
     if (command == null) return

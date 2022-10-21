@@ -49,11 +49,6 @@ export default class client extends Client {
       })
     })
 
-    this.on('ready', (client) => {
-      client.user.setPresence({ activities: [{ name: 'with code.' }] })
-      Logger('green', '\nBot initialized.', true)
-    })
-
     await this.login(token)
   }
 }
