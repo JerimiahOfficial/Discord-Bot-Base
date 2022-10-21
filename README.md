@@ -11,6 +11,4 @@ There are examples for an event also for a command inside the project file, for 
 ### Setting up the bot
 You need to replace the bot token inside of index.js can be found [here](https://github.com/JerimiahOfficial/Discord-Bot-Base/blob/23cd76bf1b8a372690b9e225ff197e196036ee88/index.js#L2). Your bot token can be found on [Developer Portal Link](https://discord.com/developers/applications) don't share this with anyone.
 
-You will also need to change the bot prefix this can be found inside of [Structures/Client.js](https://github.com/JerimiahOfficial/Discord-Bot-Base/blob/23cd76bf1b8a372690b9e225ff197e196036ee88/Structures/Client.js#L13).
-
-The bot can be ran by using `node .` inside the VS Code terminal.
+Inside of your VS Code you will see an npm scripts menu, where you can build the bot and start it. The bot can be reloaded by typing "rs" in the terminal thanks to the addition of nodemon.
