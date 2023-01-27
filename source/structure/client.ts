@@ -13,14 +13,10 @@ dotenv.config()
 export default class client extends Client {
   commands: Collection<string, Command> = new Collection()
   slashs: Collection<string, Slash> = new Collection()
-  slashs: Collection<string, Slash> = new Collection()
 
   constructor () {
     super({
       intents: [
-        'MessageContent', 'Guilds', 'GuildScheduledEvents', 'GuildPresences', 'GuildMessages',
-        'GuildMessageReactions', 'GuildMembers', 'GuildIntegrations', 'GuildBans', 'DirectMessages',
-        'DirectMessageReactions'
         'MessageContent', 'Guilds', 'GuildScheduledEvents', 'GuildPresences', 'GuildMessages',
         'GuildMessageReactions', 'GuildMembers', 'GuildIntegrations', 'GuildBans', 'DirectMessages',
         'DirectMessageReactions'
@@ -39,17 +35,11 @@ export default class client extends Client {
 
         this.commands.set(command.name, command)
         Logger('cyan', `[+] ${command.name} command loaded.`, true)
-        Logger('cyan', `[+] ${command.name} command loaded.`, true)
       }).catch((err) => {
-        Logger('red', `[-] ${file} couldn't be loaded.`, true)
         Logger('red', `[-] ${file} couldn't be loaded.`, true)
         console.error(err)
       })
     })
-  }
-
-  async importEvents (): Promise<void> {
-    const events = readdirSync('./dist/events/')
   }
 
   async importEvents (): Promise<void> {
@@ -82,7 +72,6 @@ export default class client extends Client {
         this.slashs.set(slash.data.name, slash)
         Logger('cyan', `[+] ${slash.data.name} slash loaded.`, true)
       }).catch((err) => {
-        Logger('red', `[-] ${file} couldn't be loaded.`, true)
         Logger('red', `[-] ${file} couldn't be loaded.`, true)
         console.error(err)
       })
