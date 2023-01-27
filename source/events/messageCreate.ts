@@ -1,13 +1,13 @@
-import Event from '../structure/event'
+import { Events, Message } from 'discord.js'
+
 import Logger from '../helpers/logger'
-import { Message } from 'discord.js'
+import client from '../structure/client'
+import Event from '../structure/event'
 
 export default new Event(
-  'messageCreate',
-  async (client, message: Message) => {
-    if (message.channel.type === 1) return
-
-    if (message.author.bot) return
+  Events.MessageCreate,
+  async (client: client, message: Message) => {
+    if (message.author.bot || message.channel.type === 1) return
 
     if (!message.content.startsWith('!')) return
 
@@ -18,6 +18,6 @@ export default new Event(
     if (command == null) return
 
     command.run(message, args, client)
-    Logger('yellow', `\t: ${message.author.username} used the executed "${content}".`, true)
+    Logger('yellow', `${message.author.username} used the executed "${content}".`, true)
   }
 )

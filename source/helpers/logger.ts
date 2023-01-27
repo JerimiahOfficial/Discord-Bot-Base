@@ -21,6 +21,6 @@ const colours = {
 export default function Write (colour: string, message: string, reset: boolean): void {
   if (message.length <= 0) return
 
-  colour = colour.length > 0 ? colours[colour] : '\x1b[37m'
+  colour = colour.length > 0 ? colours[colour.toLowerCase()] : '\x1b[37m'
   console.log(colour + message + (reset ? colours.reset : ''))
 }
