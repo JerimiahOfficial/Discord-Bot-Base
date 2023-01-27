@@ -9,6 +9,6 @@ To install all the dependencies for this project open the folder with VS Code an
 There are examples for an event also for a command inside the project file, for events I recommend using the following event cheat sheets [Cheat Sheet #1](https://github.com/armfxl/discord.js-cheatsheet/blob/main/cheatsheet.js) or [Cheat Sheat #2](https://gist.github.com/koad/316b265a91d933fd1b62dddfcc3ff584).
 
 ### Setting up the bot
-You need to replace the bot token inside of .env file bot token can be found on [Developer Portal Link](https://discord.com/developers/applications) don't share this with anyone.
+You will need to place your bot token inside of the `.env` file bot token can be found on [Developer Portal Link](https://discord.com/developers/applications) don't share this token with anyone.
 
 There are two scripts that you can execute in the terminal there is `npm run build` this will create a new directory called 'dist'. This directory is where tsc will build or compile your bot code into javascript, from there you can run `npm run start` which will start the bot.
