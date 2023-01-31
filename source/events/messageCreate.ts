@@ -17,7 +17,7 @@ export default new Event(
 
     if (command == null) return
 
-    command.run(message, args, client)
+    void command.run(client, message, args)
     Logger('yellow', `${message.author.username} used the executed "${content}".`, true)
   }
 )

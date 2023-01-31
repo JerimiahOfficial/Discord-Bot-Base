@@ -7,8 +7,7 @@ import Command from '../structure/command'
 
 export default new Command(
   'info',
-  '',
-  async (message, _args, client) => {
+  async (client, message, _args) => {
     if (client.user == null) return
 
     const row: ActionRowData<MessageActionRowComponentData | MessageActionRowComponentBuilder> = {

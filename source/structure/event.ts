@@ -1,13 +1,10 @@
-import { ClientEvents } from 'discord.js'
+import { type ClientEvents } from 'discord.js'
 
-import client from './client'
+import type client from './client'
 
-export default class Event {
-  event: keyof ClientEvents
-  run: (client: client, ...eventArgs: any) => void
-
-  constructor (event: keyof ClientEvents, run: (client: client, ...eventArgs: any) => any) {
-    this.event = event
-    this.run = run
-  }
+export default class Event<T extends keyof ClientEvents> {
+  public constructor (
+    public name: T,
+    public run: (client: client, ...event: ClientEvents[T]) => void | Promise<void>
+  ) { }
 }
