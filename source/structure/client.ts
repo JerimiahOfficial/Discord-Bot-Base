@@ -1,14 +1,14 @@
 import { Client, type ClientEvents, Collection } from 'discord.js'
-import * as dotenv from 'dotenv'
+import { config } from 'dotenv'
 import { readdirSync } from 'node:fs'
-import { join } from 'path'
+import { join } from 'node:path'
 
 import Logger from '../helpers/logger'
 import type Command from './command'
 import type Event from './event'
 import type Slash from './slash'
 
-dotenv.config()
+config()
 
 export default class client extends Client {
   commands = new Collection<string, Command>()
