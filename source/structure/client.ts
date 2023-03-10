@@ -60,28 +60,28 @@ export default class client extends Client {
     })
   }
 
-  // async importSlashs (): Promise<void> {
-  //   const slashs = readdirSync('./dist/slashs/')
+  async importSlashs (): Promise<void> {
+    const slashs = readdirSync('./dist/slashs/')
 
-  //   slashs.map(async (file) => {
-  //     await import(join(__dirname, '../slashs/', file)).then((file) => {
-  //       const slash = file.default as Slash | undefined
+    slashs.map(async (file) => {
+      await import(join(__dirname, '../slashs/', file)).then((file) => {
+        const slash = file.default as Slash | undefined
 
-  //       if (slash === undefined) return
+        if (slash === undefined) return
 
-  //       this.slashs.set(slash.data.name, slash)
-  //       Logger('cyan', `[+] ${slash.data.name} slash loaded.`, true)
-  //     }).catch((err) => {
-  //       Logger('red', `[-] ${file} couldn't be loaded.`, true)
-  //       console.error(err)
-  //     })
-  //   })
-  // }
+        this.slashs.set(slash.data.name, slash)
+        Logger('cyan', `[+] ${slash.data.name} slash loaded.`, true)
+      }).catch((err) => {
+        Logger('red', `[-] ${file} couldn't be loaded.`, true)
+        console.error(err)
+      })
+    })
+  }
 
   async start (): Promise<void> {
     await this.importCommands()
     await this.importEvents()
-    // await this.importSlashs()
+    await this.importSlashs()
 
     await this.login(process.env.TOKEN)
   }

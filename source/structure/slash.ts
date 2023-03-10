@@ -1,8 +1,8 @@
-import { type BaseInteraction, type Client, type SlashCommandBuilder } from 'discord.js'
+import { type ChatInputCommandInteraction, type SlashCommandBuilder } from 'discord.js'
 
 export default class Slash {
-  constructor (
+  public constructor (
     public data: SlashCommandBuilder,
-    public run: (client: Client, interaction: BaseInteraction) => void | Promise<void>
+    public run: (interaction: ChatInputCommandInteraction) => void | Promise<void>
   ) { }
 }
