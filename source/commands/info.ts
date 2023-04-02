@@ -24,11 +24,11 @@ export default new Command(
 
     const infoEmbed = {
       author: {
-        name: 'Discord bot base',
-        iconURL: `${client.user.displayAvatarURL()}`
+        name: client.user.username,
+        iconURL: client.user.displayAvatarURL()
       },
       color: 0x4a51b7,
-      description: '**Creator:** <@196494542768177154>'
+      description: '**Bot base creator:** <@196494542768177154>'
     }
 
     await message.channel.send({ embeds: [infoEmbed], components: [row] })
