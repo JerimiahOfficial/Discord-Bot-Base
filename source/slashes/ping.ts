@@ -8,7 +8,7 @@ export default new Slash(
     .setName('ping')
     .setDescription('Replies with Pong!'),
   async (_client, interaction) => {
-    Logger('red', 'Pong!', true)
     await interaction.reply('Pong!')
+    Logger('red', 'Pong!', true)
   }
 )

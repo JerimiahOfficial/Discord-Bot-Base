@@ -9,25 +9,17 @@ import logger from './logger'
 
 dotenv.config()
 
-const bot = {
-  client_id: '',
-  guild_id: ''
-}
-
 const commands: any = []
-const commandFiles = readdirSync(join(__dirname, '../slashs')).filter(file => file.endsWith('.js'))
-
-commandFiles.map(async (file) => {
-  await import(join(__dirname, '../slashs', file)).then((file) => {
+readdirSync(join(__dirname, '../slashes')).map(async (file) => {
+  await import(join(__dirname, '../slashes', file)).then((file) => {
     const command = file.default as Slash | undefined
 
     if (command === undefined) return
 
     commands.push(command.data.toJSON())
     logger('cyan', `[+] ${command.data.name} slash loaded.`, true)
-  }).catch((err) => {
+  }, () => {
     logger('red', `[-] ${file} couldn't be loaded.`, true)
-    console.error(err)
   })
 })
 
@@ -39,14 +31,16 @@ void (async () => {
   try {
     logger('cyan', 'Started refreshing application (/) commands.', true)
 
+    if (process.env.APP_ID === undefined) throw new Error('APP_ID is not defined.')
+
     await rest.put(
-      Routes.applicationCommands(bot.client_id),
+      Routes.applicationCommands(process.env.APP_ID),
       { body: commands }
     )
 
     logger('cyan', 'Successfully reloaded application (/) commands.', true)
   } catch (error) {
-    logger('red', 'Couldn\'t reload application (/) commands.', true)
     console.error(error)
+    logger('red', 'Couldn\'t reload application (/) commands.', true)
   }
 })()

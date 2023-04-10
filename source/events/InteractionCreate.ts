@@ -7,7 +7,7 @@ export default new Event(
   Events.InteractionCreate,
   async (client, interaction) => {
     if (interaction.isChatInputCommand()) {
-      const command = client.slashs.find((cmd) => cmd.data.name === interaction.commandName)
+      const command = client.slashes.find((cmd) => cmd.data.name === interaction.commandName)
       if (command == null) return
 
       try {
