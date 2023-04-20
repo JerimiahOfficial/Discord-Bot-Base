@@ -1,12 +1,11 @@
-import * as dotenv from 'dotenv'
-
 import { REST, Routes } from 'discord.js'
+import * as dotenv from 'dotenv'
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path'
 
-import type Slash from '../structure/slash'
 import logger from './logger'
 
+import type Slash from '../structure/slash'
 dotenv.config()
 
 const commands: any = []

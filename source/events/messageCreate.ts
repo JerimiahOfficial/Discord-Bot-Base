@@ -1,12 +1,11 @@
-import { Events, Message } from 'discord.js'
+import { Events } from 'discord.js'
 
 import Logger from '../helpers/logger'
-import client from '../structure/client'
 import Event from '../structure/event'
 
 export default new Event(
   Events.MessageCreate,
-  async (client: client, message: Message) => {
+  async (client, message) => {
     if (message.author.bot || message.channel.type === 1) return
 
     if (!message.content.startsWith('!')) return

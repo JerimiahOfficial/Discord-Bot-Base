@@ -1,4 +1,4 @@
-import { type Message } from 'discord.js'
+import { Message } from 'discord.js'
 
 import type Client from './client'
 

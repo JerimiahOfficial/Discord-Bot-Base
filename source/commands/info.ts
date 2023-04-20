@@ -1,26 +1,29 @@
 import {
-  ActionRowData, ButtonStyle, ComponentType, MessageActionRowComponentBuilder,
+  ActionRowData,
+  ButtonStyle,
+  ComponentType,
+  MessageActionRowComponentBuilder,
   MessageActionRowComponentData
 } from 'discord.js'
 
 import Command from '../structure/command'
 
+const row: ActionRowData<MessageActionRowComponentData | MessageActionRowComponentBuilder> = {
+  type: ComponentType.ActionRow,
+  components: [
+    {
+      type: ComponentType.Button,
+      label: 'Github',
+      style: ButtonStyle.Link,
+      url: 'https://github.com/JerimiahOfficial'
+    }
+  ]
+}
+
 export default new Command(
   'info',
   async (client, message, _args) => {
     if (client.user == null) return
-
-    const row: ActionRowData<MessageActionRowComponentData | MessageActionRowComponentBuilder> = {
-      type: ComponentType.ActionRow,
-      components: [
-        {
-          type: ComponentType.Button,
-          label: 'Github',
-          style: ButtonStyle.Link,
-          url: 'https://github.com/JerimiahOfficial'
-        }
-      ]
-    }
 
     const infoEmbed = {
       author: {
