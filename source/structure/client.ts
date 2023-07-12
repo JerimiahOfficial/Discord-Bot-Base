@@ -1,4 +1,4 @@
-import { Client, ClientEvents, Collection } from 'discord.js'
+import { Client, type ClientEvents, Collection } from 'discord.js'
 import { config } from 'dotenv'
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path'

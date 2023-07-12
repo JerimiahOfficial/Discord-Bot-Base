@@ -1,9 +1,9 @@
 import {
-  ActionRowData,
+  type ActionRowData,
   ButtonStyle,
   ComponentType,
-  MessageActionRowComponentBuilder,
-  MessageActionRowComponentData
+  type MessageActionRowComponentBuilder,
+  type MessageActionRowComponentData
 } from 'discord.js'
 
 import Command from '../structure/command'
