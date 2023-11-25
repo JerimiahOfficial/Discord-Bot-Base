@@ -1,4 +1,4 @@
-const colours = {
+const colors = {
   reset: '\x1b[0m',
   bright: '\x1b[1m',
   dim: '\x1b[2m',
@@ -18,9 +18,9 @@ const colours = {
   crimson: '\x1b[38m'
 }
 
-export default function Write (colour: string, message: string, reset: boolean): void {
+export default function Write (color: string, message: string, reset: boolean): void {
   if (message.length <= 0) return
 
-  colour = colour.length > 0 ? colours[colour.toLowerCase()] : '\x1b[37m'
-  console.log(colour + message + (reset ? colours.reset : ''))
+  color = color.length > 0 ? colors[color.toLowerCase()] : '\x1b[37m'
+  console.log(color + message + (reset ? colors.reset : ''))
 }
