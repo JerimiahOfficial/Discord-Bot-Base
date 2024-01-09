@@ -18,9 +18,9 @@ const colors = {
   crimson: '\x1b[38m'
 }
 
-export default function Write (color: string, message: string, reset: boolean): void {
+export default function Write (color: string, message: string, reset: boolean = true): void {
   if (message.length <= 0) return
 
-  color = color.length > 0 ? colors[color.toLowerCase()] : '\x1b[37m'
+  color = color.length > 0 ? colors[color.toLowerCase()] : colors.white
   console.log(color + message + (reset ? colors.reset : ''))
 }

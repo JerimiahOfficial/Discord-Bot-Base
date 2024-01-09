@@ -1,10 +1,10 @@
 import { type Message } from 'discord.js'
 
-import type Client from './client'
+import type Client from './Client'
 
 export default class Command {
   public constructor (
     public name: string,
-    public run: (client: Client, message: Message, args: string[]) => void | Promise<void>
+    public execute: (client: Client, message: Message, args: string[]) => void | Promise<void>
   ) { }
 }

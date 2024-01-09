@@ -1,7 +1,7 @@
 import { Events } from 'discord.js'
 
-import Logger from '../helpers/logger'
-import Event from '../structure/event'
+import Logger from '../helpers/Logger'
+import Event from '../structure/Event'
 
 export default new Event(
   Events.InteractionCreate,
@@ -11,11 +11,11 @@ export default new Event(
       if (command == null) return
 
       try {
-        await command.run(client, interaction)
-        Logger('green', `Command ${interaction.commandName} executed`, true)
+        await command.execute(client, interaction)
+        Logger('green', `Command ${interaction.commandName} executed`)
       } catch {
         await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true })
-        Logger('red', 'There was an error while executing this command!', true)
+        Logger('red', 'There was an error while executing this command!')
       }
     }
   }

@@ -6,7 +6,7 @@ import {
   type MessageActionRowComponentData
 } from 'discord.js'
 
-import Command from '../structure/command'
+import Command from '../structure/Command'
 
 const row: ActionRowData<MessageActionRowComponentData | MessageActionRowComponentBuilder> = {
   type: ComponentType.ActionRow,
@@ -30,7 +30,7 @@ export default new Command(
         name: client.user.username,
         iconURL: client.user.displayAvatarURL()
       },
-      color: 0x4a51b7,
+      color: 0xffff00,
       description: '**Bot base creator:** <@196494542768177154>'
     }
 
