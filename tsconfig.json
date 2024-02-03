@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
-        "lib": [ "ESNext" ],
+        "lib": [
+            "ESNext"
+        ],
         "module": "commonjs",
         "moduleResolution": "node",
         "target": "esnext",
@@ -16,6 +18,11 @@
         "importHelpers": true,
         "strictNullChecks": true,
     },
-    "include": [ "source" ],
-    "exclude": [ "node_modules", "**/*.spec.ts" ],
+    "include": [
+        "source"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ],
 }
