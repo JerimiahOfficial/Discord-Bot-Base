@@ -5,7 +5,7 @@ import Logger from './Logger.js'
 
 export default async function Load<T> (directory: string, register: (o: T) => void): Promise<void> {
   Logger('cyan', `\nLoading ${directory}...`)
-  const files = readdirSync(`./dist/${directory}/`)
+  const files = readdirSync(join(__dirname, '..', directory))
 
   await Promise.all(
     files.map(async file => {
