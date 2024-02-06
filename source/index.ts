@@ -1,7 +1,3 @@
-import Client from './structure/Client'
-
-void new Client().start()
-
 /*
     Discord Bot Base
     https://github.com/JerimiahOfficial/Discord-Bot-Base
@@ -15,3 +11,7 @@ void new Client().start()
     5. Finally you can run the bot by running 'npm run start'
 
 */
+import Client from './structure/Client'
+
+const client = new Client()
+void client.start()
