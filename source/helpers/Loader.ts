@@ -1,7 +1,7 @@
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path'
 
-import Logger from './Logger.js'
+import Logger from './logger'
 
 export default async function Load<T> (directory: string, register: (o: T) => void): Promise<void> {
   Logger('cyan', `\nLoading ${directory}...`)

@@ -1,6 +1,6 @@
 import { type ClientEvents } from 'discord.js'
 
-import type client from './Client'
+import type client from './client'
 
 export default class Event<T extends keyof ClientEvents> {
   public constructor (

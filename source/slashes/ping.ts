@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from 'discord.js'
 
-import Slash from '../structure/Slash'
+import Slash from '../structure/slash'
 
 export default new Slash(
   new SlashCommandBuilder()

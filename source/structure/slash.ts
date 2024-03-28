@@ -1,6 +1,6 @@
 import { type ChatInputCommandInteraction, type SlashCommandBuilder } from 'discord.js'
 
-import type client from './Client'
+import type client from './client'
 
 export default class Slash {
   public constructor (

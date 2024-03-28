@@ -11,7 +11,7 @@
     5. Finally you can run the bot by running 'npm run start'
 
 */
-import Client from './structure/Client'
+import Client from './structure/client'
 
 const client = new Client()
 void client.start()

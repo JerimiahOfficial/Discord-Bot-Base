@@ -1,4 +1,4 @@
-import Command from '../structure/Command'
+import Command from '../structure/command'
 
 export default new Command(
   'say',

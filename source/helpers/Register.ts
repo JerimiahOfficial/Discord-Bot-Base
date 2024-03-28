@@ -1,10 +1,10 @@
 import { REST, Routes } from 'discord.js'
 import { config } from 'dotenv'
 
-import Logger from './Logger'
-import Load from './Loader'
+import Logger from './logger'
+import Load from './loader'
 
-import type Slash from '../structure/Slash'
+import type Slash from '../structure/slash'
 config()
 
 if (process.env.TOKEN === undefined) throw new Error('TOKEN is not defined.')

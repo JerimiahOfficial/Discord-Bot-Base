@@ -1,7 +1,7 @@
 import { Events } from 'discord.js'
 
-import Event from '../structure/Event'
-import Logger from '../helpers/Logger'
+import Event from '../structure/event'
+import Logger from '../helpers/logger'
 
 export default new Event(
   Events.ClientReady,
