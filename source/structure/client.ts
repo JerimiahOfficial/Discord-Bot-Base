@@ -1,11 +1,10 @@
 import { Client, Collection } from 'discord.js'
 import { config } from 'dotenv'
 
-import Load from '../helpers/loader'
-
 import type Command from './command'
 import type Event from './event'
 import type Slash from './slash'
+import Load from '../helpers/Loader'
 
 config()
 

@@ -12,10 +12,10 @@ export default new Event(
 
       try {
         await command.execute(client, interaction)
-        Logger('green', `Command ${interaction.commandName} executed`)
+        Logger(`Command ${interaction.commandName} executed`, 'green')
       } catch {
         await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true })
-        Logger('red', 'There was an error while executing this command!')
+        Logger('There was an error while executing this command!', 'red')
       }
     }
   }

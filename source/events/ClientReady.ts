@@ -9,6 +9,6 @@ export default new Event(
     if (client.user == null) return
 
     client.user.setPresence({ activities: [{ name: 'with code.' }] })
-    Logger('green', '\nBot initialized.')
+    Logger('\nBot initialized.', 'green')
   }
 )

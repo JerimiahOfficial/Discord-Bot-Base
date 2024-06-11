@@ -17,6 +17,6 @@ export default new Event(
     if (command === undefined) return
 
     void command.execute(client, message, args)
-    Logger('yellow', `${message.author.username}[${message.author.id}] executed ${command.name} -> '${content}'.`)
+    Logger(`${message.author.username}[${message.author.id}] executed ${command.name} -> '${content}'.`, 'yellow')
   }
 )

@@ -15,9 +15,9 @@ export default async function Load<T> (directory: string, register: (o: T) => vo
         if (object === undefined) return
 
         register(object)
-        Logger('green', `[+] ${file} loaded.`)
+        Logger(`[+] ${file} loaded.`, 'cyan')
       } catch {
-        Logger('red', `[-] ${file} failed to load.`)
+        Logger(`[-] ${file} failed to load.`, 'red')
       }
     })
   )

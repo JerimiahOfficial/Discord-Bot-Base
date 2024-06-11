@@ -18,7 +18,7 @@ const colors = {
   crimson: '\x1b[38m'
 }
 
-export default function Write (color: string, message: string, reset: boolean = true): void {
+export default function Write (message: string, color: string = 'white', reset: boolean = true): void {
   if (message.length <= 0) return
 
   color = color.length > 0 ? colors[color.toLowerCase()] : colors.white
