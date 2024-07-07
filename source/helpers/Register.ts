@@ -1,4 +1,4 @@
-import { REST, Routes } from 'discord.js'
+import { REST, RESTPostAPIChatInputApplicationCommandsJSONBody, Routes } from 'discord.js'
 import { config } from 'dotenv'
 
 import Logger from './logger'
@@ -12,7 +12,7 @@ if (process.env.TOKEN === undefined) throw new Error('TOKEN is not defined.')
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN)
 
 async function RegisterSlashes (): Promise<void> {
-  const slashes: any[] = []
+  const slashes: RESTPostAPIChatInputApplicationCommandsJSONBody[] = []
   await Load<Slash>('slashes', slash => slashes.push(slash.data.toJSON()))
 
   Logger('Started refreshing application (/) commands.', 'yellow')

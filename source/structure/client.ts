@@ -1,4 +1,4 @@
-import { Client, Collection } from 'discord.js'
+import { Client, ClientEvents, Collection } from 'discord.js'
 import { config } from 'dotenv'
 
 import type Command from './command'
@@ -32,7 +32,7 @@ export default class client extends Client {
 
   async start (): Promise<void> {
     await Load<Command>('commands', command => this.commands.set(command.name, command))
-    await Load<Event<any>>('events', event => this.on(event.name, async (...args) => { await event.execute(this, ...args) }))
+    await Load<Event<keyof ClientEvents>>('events', event => this.on(event.name, async (...args) => { await event.execute(this, ...args) }))
     await Load<Slash>('slashes', slash => this.slashes.set(slash.data.name, slash))
 
     await this.login(process.env.TOKEN)

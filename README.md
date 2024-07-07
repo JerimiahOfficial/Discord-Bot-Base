@@ -7,9 +7,10 @@ There are examples for events and commands inside the project. If you don't know
 
 ### Setting up the bot
 1. Provide your bot token and id inside the `.env` file.  
-2. `npm i` Download the dependencies using.  
-3. `npm run build` Build the bot.
-4. `npm run start` Starting the bot or `npm run register` to register slash commands.
+2. `npm i` download the dependencies using.  
+3. `npm run build` build the bot.
+4. `npm run register` to register slash commands.
+5. `npm run start` starting the bot.
 
 ### Creating bot
 You can create your bot through the [Developer Portal](https://discord.com/developers/applications). You will also find your bot token and application id.
