@@ -1,8 +1,8 @@
 import Command from '../structure/command'
 
-export default new Command(
-  'say',
-  async (client, message, args) => {
+const say: Command = {
+  name: 'say',
+  execute: async (client, message, args) => {
     if (client.user == null) return
 
     const msg = args.join(' ').replace('!say ', '')
@@ -10,4 +10,6 @@ export default new Command(
     await message.channel.send({ content: msg })
     await message.delete()
   }
-)
+}
+
+export default say

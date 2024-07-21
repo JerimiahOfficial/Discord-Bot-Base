@@ -20,14 +20,25 @@ export default class client extends Client {
   slashes = new Collection<string, Slash>()
 
   constructor () {
-    super({
-      intents: [
-        'Guilds',
-        'GuildMembers',
-        'GuildMessages',
-        'MessageContent'
-      ]
-    })
+    super(
+      {
+        intents: [
+          'Guilds',
+          'GuildMembers',
+          'GuildMessages',
+          'MessageContent'
+        ],
+        presence: {
+          status: 'online',
+          activities: [
+            {
+              name: '⌨️ Playing with code.',
+              type: 4
+            }
+          ]
+        }
+      }
+    )
   }
 
   async start (): Promise<void> {
