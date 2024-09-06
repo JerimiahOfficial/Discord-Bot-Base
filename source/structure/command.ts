@@ -1,10 +1,10 @@
-import { type Message } from 'discord.js'
+import { Client, Collection, type SlashCommandOptionsOnlyBuilder, type ChatInputCommandInteraction, type SlashCommandBuilder } from 'discord.js'
 
-import type Client from './client'
+export const Commands = new Collection<string, Command>()
 
 export default class Command {
   public constructor (
-    public name: string,
-    public execute: (client: Client, message: Message, args: string[]) => void | Promise<void>
+    public data: SlashCommandBuilder | SlashCommandOptionsOnlyBuilder,
+    public execute: (client: Client, interaction: ChatInputCommandInteraction) => Promise<void>
   ) { }
 }

@@ -1,24 +1,23 @@
-import {
-  ButtonStyle,
-  ComponentType
-} from 'discord.js'
+import { ButtonStyle, ComponentType, SlashCommandBuilder } from 'discord.js'
+import Slash from '../structure/command'
 
-import Command from '../structure/command'
-
-const info: Command = {
-  name: 'info',
-  execute: async (client, message) => {
+const info: Slash = new Slash(
+  new SlashCommandBuilder()
+    .setName('info')
+    .setDescription('Displays basic info on the bot.'),
+  async (client, interaction) => {
     if (client.user == null) return
 
-    await message.channel.send(
+    await interaction.reply(
       {
+        content: '',
         embeds: [
           {
             author: {
               name: client.user.username,
               icon_url: client.user.displayAvatarURL()
             },
-            color: 0xffff00,
+            color: 0x7CB342,
             description: '**Bot base creator:** <@196494542768177154>'
           }
         ],
@@ -34,11 +33,11 @@ const info: Command = {
               }
             ]
           }
-        ]
+        ],
+        ephemeral: true
       }
     )
-    await message.delete()
   }
-}
+)
 
 export default info

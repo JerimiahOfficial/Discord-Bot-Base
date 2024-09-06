@@ -1,17 +1,42 @@
 /*
-    Discord Bot Base
-    https://github.com/JerimiahOfficial/Discord-Bot-Base
+  Discord Bot Base
+  https://github.com/JerimiahOfficial/Discord-Bot-Base
 
-    Steps to running the bot:
+  List of client intents:
+  https://discordjs.guide/popular-topics/intents.html
 
-    1. The dependecies are required to run the bot you will need to run 'npm i'
-    2. Make sure you fill in your Token and client_id inside of the .env file
-    3. Next you want to build the bot by running 'npm run build'
-    4. After that you can register the slash commands by using 'npm run register'
-    5. Finally you can run the bot by running 'npm run start'
-
+  List of client events:
+  https://discord.js.org/docs/packages/discord.js/main/ClientEvents:Interface
 */
-import Client from './structure/client'
 
-const client = new Client()
-void client.start()
+import { Client, type ClientEvents, type ClientOptions } from "discord.js"
+import { config } from "dotenv"
+import Load from "./helpers/Loader"
+import Event from "./structure/event"
+import type Command from "./structure/command"
+import { Commands } from "./structure/command"
+config()
+
+const clientOptions: ClientOptions = {
+  presence: {
+    status: 'online',
+    activities: [
+      {
+        name: '⌨️ Playing with code.',
+        type: 4
+      }
+    ]
+  },
+  intents: [
+    'Guilds',
+    'GuildMembers',
+    'GuildMessages',
+    'MessageContent'
+  ]
+}
+
+const client: Client = new Client(clientOptions)
+client.login(process.env.TOKEN)
+
+await Load<Event<keyof ClientEvents>>('events', event => client.on(event.name, async (...args) => { await event.execute(...args) }))
+await Load<Command>('commands', command => Commands.set(command.data.name, command))

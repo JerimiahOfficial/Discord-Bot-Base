@@ -1,9 +1,9 @@
-import { REST, RESTPostAPIChatInputApplicationCommandsJSONBody, Routes } from 'discord.js'
+import { REST, type RESTPostAPIChatInputApplicationCommandsJSONBody, Routes } from 'discord.js'
 import { config } from 'dotenv'
 
 import Logger from './logger'
 
-import type Slash from '../structure/slash'
+import type Slash from '../structure/command'
 import Load from './Loader'
 config()
 
